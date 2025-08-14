@@ -1,79 +1,81 @@
 {
   "C": {
-    "variables":[
+    "variables": [
       "#include <stdio.h>\nint main(){ int a=10; float b=3.5; char c='A'; printf(\"%d %f %c\\n\",a,b,c); return 0; }",
       "#include <stdio.h>\nint main(){ int x=5,y=15; printf(\"%d\\n\",x+y); return 0; }",
       "#include <stdio.h>\nint main(){ double pi=3.1416,radius=5; double area=pi*radius*radius; printf(\"%lf\\n\",area); return 0; }",
       "#include <stdio.h>\nint main(){ char grade='B'; printf(\"%c\\n\",grade); return 0; }",
       "#include <stdio.h>\nint main(){ long population=7800000000; printf(\"%ld\\n\",population); return 0; }"
     ],
-    "condition":[
+    "condition": [
       "#include <stdio.h>\nint main(){ int x=10; if(x>5) printf(\"Greater\\n\"); else printf(\"Smaller\\n\"); return 0; }",
       "#include <stdio.h>\nint main(){ int n=2; switch(n){case 1: printf(\"1\\n\"); break; case 2: printf(\"2\\n\"); break; default: printf(\"0\\n\");} return 0; }",
       "#include <stdio.h>\nint main(){ int age=18; printf(age>=18 ? \"Adult\\n\" : \"Minor\\n\"); return 0; }",
       "#include <stdio.h>\nint main(){ int score=85; if(score>=90) printf(\"A\\n\"); else if(score>=75) printf(\"B\\n\"); else printf(\"C\\n\"); return 0; }",
       "#include <stdio.h>\nint main(){ int num=-5; printf(num<0 ? \"Negative\\n\" : \"Positive\\n\"); return 0; }"
     ],
-    "loop_for":[
+    "loop_for": [
       "#include <stdio.h>\nint main(){ for(int i=0;i<5;i++) printf(\"%d\\n\",i); return 0; }",
       "#include <stdio.h>\nint main(){ int sum=0; for(int i=1;i<=10;i++) sum+=i; printf(\"%d\\n\",sum); return 0; }",
       "#include <stdio.h>\nint main(){ for(int i=10;i>0;i--) printf(\"%d\\n\",i); return 0; }",
       "#include <stdio.h>\nint main(){ for(int i=1;i<=5;i++){ for(int j=1;j<=i;j++) printf(\"*\"); printf(\"\\n\"); } return 0; }",
       "#include <stdio.h>\nint main(){ int arr[5]={1,2,3,4,5}; for(int i=0;i<5;i++) printf(\"%d\\n\",arr[i]); return 0; }"
     ],
-    "loop_while":[
+    "loop_while": [
       "#include <stdio.h>\nint main(){ int i=0; while(i<5){ printf(\"%d\\n\",i); i++; } return 0; }",
       "#include <stdio.h>\nint main(){ int n=1,sum=0; while(n<=10){ sum+=n; n++; } printf(\"%d\\n\",sum); return 0; }",
       "#include <stdio.h>\nint main(){ int i=10; while(i>0){ printf(\"%d\\n\",i); i--; } return 0; }",
       "#include <stdio.h>\nint main(){ int i=1; while(i<=5){ printf(\"%d\\n\",i*i); i++; } return 0; }",
       "#include <stdio.h>\nint main(){ int n=1; while(n<=10){ if(n%2==0) printf(\"%d\\n\",n); n++; } return 0; }"
     ],
-    "loop_do_while":[
+    "loop_do_while": [
       "#include <stdio.h>\nint main(){ int i=0; do{ printf(\"%d\\n\",i); i++; }while(i<5); return 0; }",
       "#include <stdio.h>\nint main(){ int i=1,sum=0; do{ sum+=i; i++; }while(i<=10); printf(\"%d\\n\",sum); return 0; }",
       "#include <stdio.h>\nint main(){ int i=10; do{ printf(\"%d\\n\",i); i--; }while(i>0); return 0; }",
       "#include <stdio.h>\nint main(){ int i=1; do{ printf(\"%d\\n\",i*i); i++; }while(i<=5); return 0; }",
       "#include <stdio.h>\nint main(){ int n=1; do{ if(n%2!=0) printf(\"%d\\n\",n); n++; }while(n<=10); return 0; }"
     ],
-    "array":[
+    "array": [
       "#include <stdio.h>\nint main(){ int arr[5]={1,2,3,4,5}; for(int i=0;i<5;i++) printf(\"%d\\n\",arr[i]); return 0; }",
       "#include <stdio.h>\nint main(){ char letters[3]={'A','B','C'}; for(int i=0;i<3;i++) printf(\"%c\\n\",letters[i]); return 0; }",
       "#include <stdio.h>\nint main(){ float nums[4]={1.1,2.2,3.3,4.4}; for(int i=0;i<4;i++) printf(\"%f\\n\",nums[i]); return 0; }",
       "#include <stdio.h>\nint main(){ int arr[5]; for(int i=0;i<5;i++) arr[i]=i*i; for(int i=0;i<5;i++) printf(\"%d\\n\",arr[i]); return 0; }",
       "#include <stdio.h>\nint main(){ int arr[5]={0}; for(int i=0;i<5;i++) arr[i]=i+1; for(int i=0;i<5;i++) printf(\"%d\\n\",arr[i]); return 0; }"
+    ],
+    "string": [
+      "#include <stdio.h>\n#include <string.h>\nint main(){ char str[20]=\"Hello\"; printf(\"%s\\n\",str); return 0; }",
+      "#include <stdio.h>\n#include <string.h>\nint main(){ char s1[20]=\"Hi\"; char s2[20]=\"There\"; strcat(s1,s2); printf(\"%s\\n\",s1); return 0; }",
+      "#include <stdio.h>\n#include <string.h>\nint main(){ char str[]=\"Hello World\"; printf(\"Length: %lu\\n\",strlen(str)); return 0; }",
+      "#include <stdio.h>\n#include <string.h>\nint main(){ char str[]=\"Hello\"; strcpy(str,\"Hi\"); printf(\"%s\\n\",str); return 0; }",
+      "#include <stdio.h>\n#include <string.h>\nint main(){ char str1[]=\"abc\"; char str2[]=\"xyz\"; int cmp=strcmp(str1,str2); printf(\"%d\\n\",cmp); return 0; }"
     ]
+    /* Similarly add function, structure, file, math_function */
   },
-
   "C++": {
-    "variables":[
-      "#include <iostream>\nusing namespace std;\nint main(){ int a=10; double b=3.5; char c='A'; cout<<a<<\" \"<<b<<\" \"<<c<<endl; return 0; }",
-      "#include <iostream>\nint main(){ int x=5,y=15; cout<<x+y<<endl; return 0; }",
-      "#include <iostream>\nint main(){ string name=\"Alice\"; cout<<name<<endl; return 0; }",
-      "#include <iostream>\nint main(){ float pi=3.1416,radius=5; double area=pi*radius*radius; cout<<area<<endl; return 0; }",
-      "#include <iostream>\nint main(){ long population=7800000000; cout<<population<<endl; return 0; }"
+    "variables": [
+      "#include <iostream>\nusing namespace std;\nint main(){ int a=10; float b=3.5; char c='A'; cout<<a<<' '<<b<<' '<<c<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint main(){ int x=5,y=15; cout<<x+y<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint main(){ double pi=3.1416,radius=5; double area=pi*radius*radius; cout<<area<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint main(){ char grade='B'; cout<<grade<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint main(){ long population=7800000000; cout<<population<<endl; return 0; }"
     ]
-    /* Add other topics: condition, loops, array, string, function, class, file, math_function */
+    /* Add all other topics like C */
   },
-
-  "JavaScript": {
-    "variables":[
-      "let a = 10;\nlet b = 3.5;\nlet c = 'A';\nconsole.log(a,b,c);",
-      "let x=5, y=15;\nconsole.log(x+y);",
-      "let name = 'Alice';\nconsole.log(name);",
-      "let radius = 5;\nlet area = Math.PI * radius * radius;\nconsole.log(area);",
-      "let population = 7800000000;\nconsole.log(population);"
-    ]
-    /* Add other topics: condition, loops, array, string, function, object, file, math_function */
-  },
-
   "Java": {
-    "variables":[
-      "public class Main {\n public static void main(String[] args){ int a=10; double b=3.5; char c='A'; System.out.println(a+\" \"+b+\" \"+c); }\n}",
-      "public class Main {\n public static void main(String[] args){ int x=5,y=15; System.out.println(x+y); }\n}",
-      "public class Main {\n public static void main(String[] args){ String name=\"Alice\"; System.out.println(name); }\n}",
-      "public class Main {\n public static void main(String[] args){ double radius=5; double area=Math.PI*radius*radius; System.out.println(area); }\n}",
-      "public class Main {\n public static void main(String[] args){ long population=7800000000L; System.out.println(population); }\n}"
+    "variables": [
+      "public class Main{\n public static void main(String[] args){ int a=10; double b=3.5; char c='A'; System.out.println(a+\" \"+b+\" \"+c); } }",
+      "public class Main{\n public static void main(String[] args){ int x=5,y=15; System.out.println(x+y); } }"
+      /* Add 3 more examples */
     ]
-    /* Add other topics: condition, loops, array, string, function, class, file, math_function */
+    /* Add all other topics */
+  },
+  "JavaScript": {
+    "variables": [
+      "let a=10;\nlet b=3.5;\nlet c='A';\nconsole.log(a,b,c);",
+      "let x=5, y=15;\nconsole.log(x+y);"
+      /* Add 3 more examples */
+    ]
+    /* Add all other topics */
   }
 }
+
