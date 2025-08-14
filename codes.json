@@ -1,0 +1,318 @@
+{
+  "C": {
+    "variables": [
+      "#include <stdio.h>\nint main() {\n    int a = 10;\n    float b = 3.5;\n                char c = 'A';\n    printf(\"%d %f %c\\n\", a, b, c);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int a = 11;\n    float b = 4.5;\n                char c = 'A';\n    printf(\"%d %f %c\\n\", a, b, c);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int a = 12;\n    float b = 5.5;\n                char c = 'A';\n    printf(\"%d %f %c\\n\", a, b, c);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int a = 13;\n    float b = 6.5;\n                char c = 'A';\n    printf(\"%d %f %c\\n\", a, b, c);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int a = 14;\n    float b = 7.5;\n                char c = 'A';\n    printf(\"%d %f %c\\n\", a, b, c);\n    return 0;\n}"
+    ],
+    "condition": [
+      "#include <stdio.h>\nint main() {\n    int x = 1;\n    if (x % 2 == 0) printf(\"Even\\n\");\n    else printf(\"Odd\\n\");\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int x = 2;\n    if (x % 2 == 0) printf(\"Even\\n\");\n    else printf(\"Odd\\n\");\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int x = 3;\n    if (x % 2 == 0) printf(\"Even\\n\");\n    else printf(\"Odd\\n\");\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int x = 4;\n    if (x % 2 == 0) printf(\"Even\\n\");\n    else printf(\"Odd\\n\");\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x % 2 == 0) printf(\"Even\\n\");\n    else printf(\"Odd\\n\");\n    return 0;\n}"
+    ],
+    "loop_for": [
+      "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 5; i++) printf(\"%d\\n\", i);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 6; i++) printf(\"%d\\n\", i);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 7; i++) printf(\"%d\\n\", i);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 8; i++) printf(\"%d\\n\", i);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 9; i++) printf(\"%d\\n\", i);\n    return 0;\n}"
+    ],
+    "loop_while": [
+      "#include <stdio.h>\nint main() {\n    int i = 0;\n    while (i < 5) { printf(\"%d\\n\", i); i++; }\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 1;\n    while (i < 5) { printf(\"%d\\n\", i); i++; }\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 2;\n    while (i < 5) { printf(\"%d\\n\", i); i++; }\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 3;\n    while (i < 5) { printf(\"%d\\n\", i); i++; }\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 4;\n    while (i < 5) { printf(\"%d\\n\", i); i++; }\n    return 0;\n}"
+    ],
+    "loop_do_while": [
+      "#include <stdio.h>\nint main() {\n    int i = 0;\n    do { printf(\"%d\\n\", i); i++; } while (i < 3);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 0;\n    do { printf(\"%d\\n\", i); i++; } while (i < 4);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 0;\n    do { printf(\"%d\\n\", i); i++; } while (i < 5);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 0;\n    do { printf(\"%d\\n\", i); i++; } while (i < 6);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int i = 0;\n    do { printf(\"%d\\n\", i); i++; } while (i < 7);\n    return 0;\n}"
+    ],
+    "array": [
+      "#include <stdio.h>\nint main() {\n    int arr[5] = {1,2,3,4,5};\n    for (int j = 0; j < 5; j++) printf(\"%d\\n\", arr[j]);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int arr[5] = {2,3,4,5,6};\n    for (int j = 0; j < 5; j++) printf(\"%d\\n\", arr[j]);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int arr[5] = {3,4,5,6,7};\n    for (int j = 0; j < 5; j++) printf(\"%d\\n\", arr[j]);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int arr[5] = {4,5,6,7,8};\n    for (int j = 0; j < 5; j++) printf(\"%d\\n\", arr[j]);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    int arr[5] = {5,6,7,8,9};\n    for (int j = 0; j < 5; j++) printf(\"%d\\n\", arr[j]);\n    return 0;\n}"
+    ],
+    "string": [
+      "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s1[32] = \"Example0\";\n    char s2[32] = \"_C\";\n    strcat(s1, s2);\n    printf(\"%s\\n\", s1);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s1[32] = \"Example1\";\n    char s2[32] = \"_C\";\n    strcat(s1, s2);\n    printf(\"%s\\n\", s1);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s1[32] = \"Example2\";\n    char s2[32] = \"_C\";\n    strcat(s1, s2);\n    printf(\"%s\\n\", s1);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s1[32] = \"Example3\";\n    char s2[32] = \"_C\";\n    strcat(s1, s2);\n    printf(\"%s\\n\", s1);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s1[32] = \"Example4\";\n    char s2[32] = \"_C\";\n    strcat(s1, s2);\n    printf(\"%s\\n\", s1);\n    return 0;\n}"
+    ],
+    "function": [
+      "#include <stdio.h>\nint add(int a, int b) { return a + b; }\nint main() {\n    printf(\"%d\\n\", add(2, 3));\n    return 0;\n}",
+      "#include <stdio.h>\nint add(int a, int b) { return a + b; }\nint main() {\n    printf(\"%d\\n\", add(3, 4));\n    return 0;\n}",
+      "#include <stdio.h>\nint add(int a, int b) { return a + b; }\nint main() {\n    printf(\"%d\\n\", add(4, 5));\n    return 0;\n}",
+      "#include <stdio.h>\nint add(int a, int b) { return a + b; }\nint main() {\n    printf(\"%d\\n\", add(5, 6));\n    return 0;\n}",
+      "#include <stdio.h>\nint add(int a, int b) { return a + b; }\nint main() {\n    printf(\"%d\\n\", add(6, 7));\n    return 0;\n}"
+    ],
+    "structure": [
+      "#include <stdio.h>\nstruct Point{ int x; int y; };\nint main() {\n    struct Point p = {1, 2};\n    printf(\"%d %d\\n\", p.x, p.y);\n    return 0;\n}",
+      "#include <stdio.h>\nstruct Point{ int x; int y; };\nint main() {\n    struct Point p = {2, 3};\n    printf(\"%d %d\\n\", p.x, p.y);\n    return 0;\n}",
+      "#include <stdio.h>\nstruct Point{ int x; int y; };\nint main() {\n    struct Point p = {3, 4};\n    printf(\"%d %d\\n\", p.x, p.y);\n    return 0;\n}",
+      "#include <stdio.h>\nstruct Point{ int x; int y; };\nint main() {\n    struct Point p = {4, 5};\n    printf(\"%d %d\\n\", p.x, p.y);\n    return 0;\n}",
+      "#include <stdio.h>\nstruct Point{ int x; int y; };\nint main() {\n    struct Point p = {5, 6};\n    printf(\"%d %d\\n\", p.x, p.y);\n    return 0;\n}"
+    ],
+    "file": [
+      "#include <stdio.h>\nint main() {\n    FILE *f = fopen(\"out.txt\", \"w\");\n    fprintf(f, \"Line 1\\n\");\n    fclose(f);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    FILE *f = fopen(\"out.txt\", \"w\");\n    fprintf(f, \"Line 2\\n\");\n    fclose(f);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    FILE *f = fopen(\"out.txt\", \"w\");\n    fprintf(f, \"Line 3\\n\");\n    fclose(f);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    FILE *f = fopen(\"out.txt\", \"w\");\n    fprintf(f, \"Line 4\\n\");\n    fclose(f);\n    return 0;\n}",
+      "#include <stdio.h>\nint main() {\n    FILE *f = fopen(\"out.txt\", \"w\");\n    fprintf(f, \"Line 5\\n\");\n    fclose(f);\n    return 0;\n}"
+    ],
+    "math_function": [
+      "#include <stdio.h>\n#include <math.h>\nint main() {\n    double v = sqrt(4);\n    printf(\"%f\\n\", v);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <math.h>\nint main() {\n    double v = sqrt(8);\n    printf(\"%f\\n\", v);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <math.h>\nint main() {\n    double v = sqrt(12);\n    printf(\"%f\\n\", v);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <math.h>\nint main() {\n    double v = sqrt(16);\n    printf(\"%f\\n\", v);\n    return 0;\n}",
+      "#include <stdio.h>\n#include <math.h>\nint main() {\n    double v = sqrt(20);\n    printf(\"%f\\n\", v);\n    return 0;\n}"
+    ]
+  },
+  "C++": {
+    "variables": [
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int a = 10;\n    double b = 3.5;\n    char c = 'A';\n    cout << a << ' ' << b << ' ' << c << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int a = 11;\n    double b = 4.5;\n    char c = 'A';\n    cout << a << ' ' << b << ' ' << c << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int a = 12;\n    double b = 5.5;\n    char c = 'A';\n    cout << a << ' ' << b << ' ' << c << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int a = 13;\n    double b = 6.5;\n    char c = 'A';\n    cout << a << ' ' << b << ' ' << c << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int a = 14;\n    double b = 7.5;\n    char c = 'A';\n    cout << a << ' ' << b << ' ' << c << endl;\n    return 0;\n}"
+    ],
+    "condition": [
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int x = 1;\n    if (x % 2 == 0) cout << \"Even\" << endl;\n    else cout << \"Odd\" << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int x = 2;\n    if (x % 2 == 0) cout << \"Even\" << endl;\n    else cout << \"Odd\" << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int x = 3;\n    if (x % 2 == 0) cout << \"Even\" << endl;\n    else cout << \"Odd\" << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int x = 4;\n    if (x % 2 == 0) cout << \"Even\" << endl;\n    else cout << \"Odd\" << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int x = 5;\n    if (x % 2 == 0) cout << \"Even\" << endl;\n    else cout << \"Odd\" << endl;\n    return 0;\n}"
+    ],
+    "loop_for": [
+      "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 0; i < 5; ++i) cout << i << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 0; i < 6; ++i) cout << i << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 0; i < 7; ++i) cout << i << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 0; i < 8; ++i) cout << i << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    for (int i = 0; i < 9; ++i) cout << i << endl;\n    return 0;\n}"
+    ],
+    "loop_while": [
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    while (i < 5) { cout << i << endl; ++i; }\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 1;\n    while (i < 5) { cout << i << endl; ++i; }\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 2;\n    while (i < 5) { cout << i << endl; ++i; }\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 3;\n    while (i < 5) { cout << i << endl; ++i; }\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 4;\n    while (i < 5) { cout << i << endl; ++i; }\n    return 0;\n}"
+    ],
+    "loop_do_while": [
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    do { cout << i << endl; ++i; } while (i < 3);\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    do { cout << i << endl; ++i; } while (i < 4);\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    do { cout << i << endl; ++i; } while (i < 5);\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    do { cout << i << endl; ++i; } while (i < 6);\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int i = 0;\n    do { cout << i << endl; ++i; } while (i < 7);\n    return 0;\n}"
+    ],
+    "array": [
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int arr[5] = {1,2,3,4,5};\n    for (int j = 0; j < 5; ++j) cout << arr[j] << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int arr[5] = {2,3,4,5,6};\n    for (int j = 0; j < 5; ++j) cout << arr[j] << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int arr[5] = {3,4,5,6,7};\n    for (int j = 0; j < 5; ++j) cout << arr[j] << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int arr[5] = {4,5,6,7,8};\n    for (int j = 0; j < 5; ++j) cout << arr[j] << endl;\n    return 0;\n}",
+      "#include <iostream>\nusing namespace std;\nint main() {\n    int arr[5] = {5,6,7,8,9};\n    for (int j = 0; j < 5; ++j) cout << arr[j] << endl;\n    return 0;\n}"
+    ],
+    "string": [
+      "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string s = \"Example0\";\n            s += \"_CPP\";\n            cout << s << endl;\n            return 0;\n}",
+      "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string s = \"Example1\";\n            s += \"_CPP\";\n            cout << s << endl;\n            return 0;\n}",
+      "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string s = \"Example2\";\n            s += \"_CPP\";\n            cout << s << endl;\n            return 0;\n}",
+      "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string s = \"Example3\";\n            s += \"_CPP\";\n            cout << s << endl;\n            return 0;\n}",
+      "#include <iostream>\n#include <string>\nusing namespace std;\nint main() {\n    string s = \"Example4\";\n            s += \"_CPP\";\n            cout << s << endl;\n            return 0;\n}"
+    ],
+    "function": [
+      "#include <iostream>\nusing namespace std;\nint add(int a,int b){ return a+b; }\nint main(){ cout<<add(2,3)<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint add(int a,int b){ return a+b; }\nint main(){ cout<<add(3,4)<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint add(int a,int b){ return a+b; }\nint main(){ cout<<add(4,5)<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint add(int a,int b){ return a+b; }\nint main(){ cout<<add(5,6)<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nint add(int a,int b){ return a+b; }\nint main(){ cout<<add(6,7)<<endl; return 0; }"
+    ],
+    "structure": [
+      "#include <iostream>\nusing namespace std;\nstruct Point{ int x,y; };\nint main(){ Point p = {1,2}; cout<<p.x<<' '<<p.y<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nstruct Point{ int x,y; };\nint main(){ Point p = {2,3}; cout<<p.x<<' '<<p.y<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nstruct Point{ int x,y; };\nint main(){ Point p = {3,4}; cout<<p.x<<' '<<p.y<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nstruct Point{ int x,y; };\nint main(){ Point p = {4,5}; cout<<p.x<<' '<<p.y<<endl; return 0; }",
+      "#include <iostream>\nusing namespace std;\nstruct Point{ int x,y; };\nint main(){ Point p = {5,6}; cout<<p.x<<' '<<p.y<<endl; return 0; }"
+    ],
+    "file": [
+      "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){ ofstream f(\"out.txt\"); f<<\"Line 1\"<<endl; f.close(); return 0; }",
+      "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){ ofstream f(\"out.txt\"); f<<\"Line 2\"<<endl; f.close(); return 0; }",
+      "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){ ofstream f(\"out.txt\"); f<<\"Line 3\"<<endl; f.close(); return 0; }",
+      "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){ ofstream f(\"out.txt\"); f<<\"Line 4\"<<endl; f.close(); return 0; }",
+      "#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){ ofstream f(\"out.txt\"); f<<\"Line 5\"<<endl; f.close(); return 0; }"
+    ],
+    "math_function": [
+      "#include <iostream>\n#include <cmath>\nusing namespace std;\nint main(){ double v = sqrt(4); cout<<v<<endl; return 0; }",
+      "#include <iostream>\n#include <cmath>\nusing namespace std;\nint main(){ double v = sqrt(8); cout<<v<<endl; return 0; }",
+      "#include <iostream>\n#include <cmath>\nusing namespace std;\nint main(){ double v = sqrt(12); cout<<v<<endl; return 0; }",
+      "#include <iostream>\n#include <cmath>\nusing namespace std;\nint main(){ double v = sqrt(16); cout<<v<<endl; return 0; }",
+      "#include <iostream>\n#include <cmath>\nusing namespace std;\nint main(){ double v = sqrt(20); cout<<v<<endl; return 0; }"
+    ]
+  },
+  "JavaScript": {
+    "variables": [
+      "let a = 10;\nlet b = 3.5;\nlet c = 'A';\nconsole.log(a, b, c);",
+      "let a = 11;\nlet b = 4.5;\nlet c = 'A';\nconsole.log(a, b, c);",
+      "let a = 12;\nlet b = 5.5;\nlet c = 'A';\nconsole.log(a, b, c);",
+      "let a = 13;\nlet b = 6.5;\nlet c = 'A';\nconsole.log(a, b, c);",
+      "let a = 14;\nlet b = 7.5;\nlet c = 'A';\nconsole.log(a, b, c);"
+    ],
+    "condition": [
+      "let x = 1;\nif (x % 2 === 0) console.log('Even'); else console.log('Odd');",
+      "let x = 2;\nif (x % 2 === 0) console.log('Even'); else console.log('Odd');",
+      "let x = 3;\nif (x % 2 === 0) console.log('Even'); else console.log('Odd');",
+      "let x = 4;\nif (x % 2 === 0) console.log('Even'); else console.log('Odd');",
+      "let x = 5;\nif (x % 2 === 0) console.log('Even'); else console.log('Odd');"
+    ],
+    "loop_for": [
+      "for (let i = 0; i < 5; i++) console.log(i);",
+      "for (let i = 0; i < 6; i++) console.log(i);",
+      "for (let i = 0; i < 7; i++) console.log(i);",
+      "for (let i = 0; i < 8; i++) console.log(i);",
+      "for (let i = 0; i < 9; i++) console.log(i);"
+    ],
+    "loop_while": [
+      "let i = 0;\nwhile (i < 5) { console.log(i); i++; }",
+      "let i = 1;\nwhile (i < 5) { console.log(i); i++; }",
+      "let i = 2;\nwhile (i < 5) { console.log(i); i++; }",
+      "let i = 3;\nwhile (i < 5) { console.log(i); i++; }",
+      "let i = 4;\nwhile (i < 5) { console.log(i); i++; }"
+    ],
+    "loop_do_while": [
+      "let i = 0;\ndo { console.log(i); i++; } while (i < 3);",
+      "let i = 0;\ndo { console.log(i); i++; } while (i < 4);",
+      "let i = 0;\ndo { console.log(i); i++; } while (i < 5);",
+      "let i = 0;\ndo { console.log(i); i++; } while (i < 6);",
+      "let i = 0;\ndo { console.log(i); i++; } while (i < 7);"
+    ],
+    "array": [
+      "let arr = [1,2,3,4,5];\narr.forEach(x => console.log(x));",
+      "let arr = [2,3,4,5,6];\narr.forEach(x => console.log(x));",
+      "let arr = [3,4,5,6,7];\narr.forEach(x => console.log(x));",
+      "let arr = [4,5,6,7,8];\narr.forEach(x => console.log(x));",
+      "let arr = [5,6,7,8,9];\narr.forEach(x => console.log(x));"
+    ],
+    "string": [
+      "let s = 'Example0';\ns += '_JS';\nconsole.log(s);",
+      "let s = 'Example1';\ns += '_JS';\nconsole.log(s);",
+      "let s = 'Example2';\ns += '_JS';\nconsole.log(s);",
+      "let s = 'Example3';\ns += '_JS';\nconsole.log(s);",
+      "let s = 'Example4';\ns += '_JS';\nconsole.log(s);"
+    ],
+    "function": [
+      "function add(a,b){return a+b;}\nconsole.log(add(2,3));",
+      "function add(a,b){return a+b;}\nconsole.log(add(3,4));",
+      "function add(a,b){return a+b;}\nconsole.log(add(4,5));",
+      "function add(a,b){return a+b;}\nconsole.log(add(5,6));",
+      "function add(a,b){return a+b;}\nconsole.log(add(6,7));"
+    ],
+    "structure": [
+      "let person = {name: 'User0', age: 20};\nconsole.log(person.name, person.age);",
+      "let person = {name: 'User1', age: 21};\nconsole.log(person.name, person.age);",
+      "let person = {name: 'User2', age: 22};\nconsole.log(person.name, person.age);",
+      "let person = {name: 'User3', age: 23};\nconsole.log(person.name, person.age);",
+      "let person = {name: 'User4', age: 24};\nconsole.log(person.name, person.age);"
+    ],
+    "file": [
+      "const fs = require('fs');\nfs.writeFileSync('out.txt', 'Line 1');",
+      "const fs = require('fs');\nfs.writeFileSync('out.txt', 'Line 2');",
+      "const fs = require('fs');\nfs.writeFileSync('out.txt', 'Line 3');",
+      "const fs = require('fs');\nfs.writeFileSync('out.txt', 'Line 4');",
+      "const fs = require('fs');\nfs.writeFileSync('out.txt', 'Line 5');"
+    ],
+    "math_function": [
+      "console.log(Math.sqrt(4));",
+      "console.log(Math.sqrt(8));",
+      "console.log(Math.sqrt(12));",
+      "console.log(Math.sqrt(16));",
+      "console.log(Math.sqrt(20));"
+    ]
+  },
+  "Java": {
+    "variables": [
+      "public class Main {\n    public static void main(String[] args) {\n        int a = 10;\n        double b = 3.5;\n        char c = 'A';\n        System.out.println(a + \" \" + b + \" \" + c);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int a = 11;\n        double b = 4.5;\n        char c = 'A';\n        System.out.println(a + \" \" + b + \" \" + c);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int a = 12;\n        double b = 5.5;\n        char c = 'A';\n        System.out.println(a + \" \" + b + \" \" + c);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int a = 13;\n        double b = 6.5;\n        char c = 'A';\n        System.out.println(a + \" \" + b + \" \" + c);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int a = 14;\n        double b = 7.5;\n        char c = 'A';\n        System.out.println(a + \" \" + b + \" \" + c);\n    }\n}"
+    ],
+    "condition": [
+      "public class Main {\n    public static void main(String[] args) {\n        int x = 1;\n        if (x % 2 == 0) System.out.println(\"Even\"); else System.out.println(\"Odd\");\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int x = 2;\n        if (x % 2 == 0) System.out.println(\"Even\"); else System.out.println(\"Odd\");\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int x = 3;\n        if (x % 2 == 0) System.out.println(\"Even\"); else System.out.println(\"Odd\");\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int x = 4;\n        if (x % 2 == 0) System.out.println(\"Even\"); else System.out.println(\"Odd\");\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        if (x % 2 == 0) System.out.println(\"Even\"); else System.out.println(\"Odd\");\n    }\n}"
+    ],
+    "loop_for": [
+      "public class Main {\n    public static void main(String[] args) {\n        for (int i=0;i<5;i++) System.out.println(i);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        for (int i=0;i<6;i++) System.out.println(i);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        for (int i=0;i<7;i++) System.out.println(i);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        for (int i=0;i<8;i++) System.out.println(i);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        for (int i=0;i<9;i++) System.out.println(i);\n    }\n}"
+    ],
+    "loop_while": [
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        while (i < 5) { System.out.println(i); i++; }\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 1;\n        while (i < 5) { System.out.println(i); i++; }\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 2;\n        while (i < 5) { System.out.println(i); i++; }\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 3;\n        while (i < 5) { System.out.println(i); i++; }\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 4;\n        while (i < 5) { System.out.println(i); i++; }\n    }\n}"
+    ],
+    "loop_do_while": [
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        do { System.out.println(i); i++; } while (i < 3);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        do { System.out.println(i); i++; } while (i < 4);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        do { System.out.println(i); i++; } while (i < 5);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        do { System.out.println(i); i++; } while (i < 6);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int i = 0;\n        do { System.out.println(i); i++; } while (i < 7);\n    }\n}"
+    ],
+    "array": [
+      "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[]{1,2,3,4,5};\n        for (int v : arr) System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[]{2,3,4,5,6};\n        for (int v : arr) System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[]{3,4,5,6,7};\n        for (int v : arr) System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[]{4,5,6,7,8};\n        for (int v : arr) System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        int[] arr = new int[]{5,6,7,8,9};\n        for (int v : arr) System.out.println(v);\n    }\n}"
+    ],
+    "string": [
+      "public class Main {\n    public static void main(String[] args) {\n        String s = \"Example0\";\n        s = s + \"_JAVA\";\n        System.out.println(s);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        String s = \"Example1\";\n        s = s + \"_JAVA\";\n        System.out.println(s);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        String s = \"Example2\";\n        s = s + \"_JAVA\";\n        System.out.println(s);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        String s = \"Example3\";\n        s = s + \"_JAVA\";\n        System.out.println(s);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        String s = \"Example4\";\n        s = s + \"_JAVA\";\n        System.out.println(s);\n    }\n}"
+    ],
+    "function": [
+      "public class Main {\n    static int add(int a,int b){ return a+b; }\n    public static void main(String[] args) {\n        System.out.println(add(2,3));\n    }\n}",
+      "public class Main {\n    static int add(int a,int b){ return a+b; }\n    public static void main(String[] args) {\n        System.out.println(add(3,4));\n    }\n}",
+      "public class Main {\n    static int add(int a,int b){ return a+b; }\n    public static void main(String[] args) {\n        System.out.println(add(4,5));\n    }\n}",
+      "public class Main {\n    static int add(int a,int b){ return a+b; }\n    public static void main(String[] args) {\n        System.out.println(add(5,6));\n    }\n}",
+      "public class Main {\n    static int add(int a,int b){ return a+b; }\n    public static void main(String[] args) {\n        System.out.println(add(6,7));\n    }\n}"
+    ],
+    "structure": [
+      "public class Main {\n    static class Person { String name; int age; Person(String n,int a){name=n;age=a;} }\n    public static void main(String[] args) {\n        Person p = new Person(\"User0\",20);\n        System.out.println(p.name + \" \" + p.age);\n    }\n}",
+      "public class Main {\n    static class Person { String name; int age; Person(String n,int a){name=n;age=a;} }\n    public static void main(String[] args) {\n        Person p = new Person(\"User1\",21);\n        System.out.println(p.name + \" \" + p.age);\n    }\n}",
+      "public class Main {\n    static class Person { String name; int age; Person(String n,int a){name=n;age=a;} }\n    public static void main(String[] args) {\n        Person p = new Person(\"User2\",22);\n        System.out.println(p.name + \" \" + p.age);\n    }\n}",
+      "public class Main {\n    static class Person { String name; int age; Person(String n,int a){name=n;age=a;} }\n    public static void main(String[] args) {\n        Person p = new Person(\"User3\",23);\n        System.out.println(p.name + \" \" + p.age);\n    }\n}",
+      "public class Main {\n    static class Person { String name; int age; Person(String n,int a){name=n;age=a;} }\n    public static void main(String[] args) {\n        Person p = new Person(\"User4\",24);\n        System.out.println(p.name + \" \" + p.age);\n    }\n}"
+    ],
+    "file": [
+      "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        FileWriter fw = new FileWriter(\"out.txt\");\n        fw.write(\"Line 1\\n\");\n        fw.close();\n    }\n}",
+      "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        FileWriter fw = new FileWriter(\"out.txt\");\n        fw.write(\"Line 2\\n\");\n        fw.close();\n    }\n}",
+      "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        FileWriter fw = new FileWriter(\"out.txt\");\n        fw.write(\"Line 3\\n\");\n        fw.close();\n    }\n}",
+      "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        FileWriter fw = new FileWriter(\"out.txt\");\n        fw.write(\"Line 4\\n\");\n        fw.close();\n    }\n}",
+      "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        FileWriter fw = new FileWriter(\"out.txt\");\n        fw.write(\"Line 5\\n\");\n        fw.close();\n    }\n}"
+    ],
+    "math_function": [
+      "public class Main {\n    public static void main(String[] args) {\n        double v = Math.sqrt(4);\n        System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        double v = Math.sqrt(8);\n        System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        double v = Math.sqrt(12);\n        System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        double v = Math.sqrt(16);\n        System.out.println(v);\n    }\n}",
+      "public class Main {\n    public static void main(String[] args) {\n        double v = Math.sqrt(20);\n        System.out.println(v);\n    }\n}"
+    ]
+  }
+}
