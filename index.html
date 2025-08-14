@@ -81,52 +81,154 @@ document.getElementById('languageSelect').addEventListener('change', function(){
   const lang=this.value;
   if(lang){
     Object.keys(codeData[lang]).forEach(topic=>{
-      let option=document.createElement('option'); option.value=topic; option.textContent=topic; topicSelect.appendChild(option);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Code Generator</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+body { background:#1e1e1e; color:white; font-family:monospace; padding:20px; margin:0; text-align:center; }
+.container { display:flex; flex-direction:column; align-items:center; max-width:900px; margin:auto; }
+select, button { padding:10px; margin:10px; font-size:16px; border-radius:5px; border:none; outline:none; }
+
+#codeBox {
+  width:100%; max-width:95%;
+  background:#2d2d2d; padding:15px; border-radius:8px;
+  text-align:left; min-height:300px; max-height:500px;
+  overflow-y:auto; overflow-x:auto; white-space:pre; box-shadow:0 0 10px #000;
+  margin-top:20px; box-sizing:border-box; position:relative;
+}
+
+pre { margin:0; font-family:monospace; font-size:14px; }
+.cursor { display:inline-block; width:8px; background:white; margin-left:2px; animation: blink 0.7s steps(1) infinite; }
+@keyframes blink { 50% { background: transparent; } }
+
+.copy-btn {
+  position:absolute; top:10px; right:10px; color:white; cursor:pointer; font-size:18px; opacity:0.7; transition:opacity 0.2s;
+}
+.copy-btn:hover { opacity:1; }
+
+hr {
+  border: 0; border-top: 1px solid #555; margin:10px 0 10px 0;
+}
+
+@media (max-width:600px){ 
+  select, button { width:90%; font-size:14px; } 
+  #codeBox { min-height:200px; font-size:12px; padding:10px; } 
+  .copy-btn { font-size:16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Live Multi-Language Code Generator</h1>
+  <select id="languageSelect"><option value="">Select Language</option></select>
+  <select id="topicSelect" disabled><option value="">Select Topic</option></select>
+  
+  <div id="codeBox">
+    <i class="fa-solid fa-copy copy-btn" title="Copy Code"></i>
+    <hr>
+    <pre><code id="code" class="language-c"></code><span class="cursor"></span></pre>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+
+<script>
+let codeData = {};
+let lastIndex = {}; // track last snippet for each language-topic
+
+// Load JSON
+fetch('codes.json').then(res => res.json()).then(data => { 
+  codeData = data; 
+  populateLanguages(); 
+});
+
+// Populate language dropdown
+function populateLanguages(){
+  const langSelect = document.getElementById('languageSelect');
+  Object.keys(codeData).forEach(lang=>{
+    let option = document.createElement('option'); 
+    option.value = lang; 
+    option.textContent = lang; 
+    langSelect.appendChild(option);
+  });
+}
+
+// Populate topics dropdown
+document.getElementById('languageSelect').addEventListener('change', function(){
+  const topicSelect = document.getElementById('topicSelect'); 
+  topicSelect.innerHTML = '<option value="">Select Topic</option>';
+  const lang = this.value;
+  if(lang){
+    Object.keys(codeData[lang]).forEach(topic=>{
+      let option = document.createElement('option'); 
+      option.value = topic; 
+      option.textContent = topic; 
+      topicSelect.appendChild(option);
     });
-    topicSelect.disabled=false;
-  } else topicSelect.disabled=true;
+    topicSelect.disabled = false;
+  } else topicSelect.disabled = true;
 });
 
 // Load a random snippet (different from last one)
 document.getElementById('topicSelect').addEventListener('change', function(){
-  const lang=document.getElementById('languageSelect').value;
-  const topic=this.value;
+  const lang = document.getElementById('languageSelect').value;
+  const topic = this.value;
   if(lang && topic){
-    const codes=codeData[lang][topic];
+    const codes = codeData[lang][topic];
     let randomIndex;
     do {
-      randomIndex=Math.floor(Math.random()*codes.length);
+      randomIndex = Math.floor(Math.random()*codes.length);
     } while(codes.length>1 && randomIndex === (lastIndex[lang+'-'+topic]||-1));
-    lastIndex[lang+'-'+topic]=randomIndex;
+    lastIndex[lang+'-'+topic] = randomIndex;
     const codeToLoad = codes[randomIndex];
-    typeCode(codeToLoad, lang);
+    typeCodeLineByLine(codeToLoad, lang);
   }
 });
 
-// Typing animation (preserve formatting)
-function typeCode(text, language){
+// Typing animation line by line
+function typeCodeLineByLine(text, language){
   const codeEl = document.getElementById('code');
   codeEl.className = 'language-' + (language.toLowerCase() === 'javascript' ? 'javascript' : language.toLowerCase().replace('+','p'));
   codeEl.textContent = '';
-  let index = 0;
   const codeBox = document.getElementById('codeBox');
+  const lines = text.split('\n'); // split code into lines
+  let lineIndex = 0;
 
-  function typeChar() {
-    if (index < text.length) {
-      let char = text[index++];
-      codeEl.textContent += char;
-      Prism.highlightElement(codeEl);
-      codeBox.scrollTop = codeBox.scrollHeight; // auto vertical scroll
-      codeBox.scrollLeft = codeBox.scrollWidth; // auto horizontal scroll for long lines
-      setTimeout(typeChar, Math.floor(Math.random()*(typingSpeedRange[1]-typingSpeedRange[0]+1)) + typingSpeedRange[0]);
+  function typeLine(){
+    if(lineIndex < lines.length){
+      let line = lines[lineIndex++];
+      let charIndex = 0;
+
+      function typeChar(){
+        if(charIndex < line.length){
+          codeEl.textContent += line[charIndex++];
+          Prism.highlightElement(codeEl);
+          codeBox.scrollTop = codeBox.scrollHeight;
+          setTimeout(typeChar, Math.floor(Math.random()*(50-15+1))+15);
+        } else {
+          codeEl.textContent += '\n'; // add newline
+          typeLine(); // next line
+        }
+      }
+      typeChar();
     }
   }
-  typeChar();
+  typeLine();
 }
 
 // Copy code to clipboard
 document.querySelector('.copy-btn').addEventListener('click', ()=>{
-  const codeText=document.getElementById('code').textContent;
+  const codeText = document.getElementById('code').textContent;
   navigator.clipboard.writeText(codeText).then(()=>{
     alert('Code copied to clipboard!');
   });
