@@ -7,32 +7,30 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-body {
-  background:#1e1e1e; color:white; font-family:monospace; padding:20px; margin:0; text-align:center;
-}
-.container {
-  display:flex; flex-direction:column; align-items:center; max-width:900px; margin:auto;
-}
-select, button {
-  padding:10px; margin:10px; font-size:16px; border-radius:5px; border:none; outline:none;
-}
+body { background:#1e1e1e; color:white; font-family:monospace; padding:20px; margin:0; text-align:center; }
+.container { display:flex; flex-direction:column; align-items:center; max-width:900px; margin:auto; }
+select, button { padding:10px; margin:10px; font-size:16px; border-radius:5px; border:none; outline:none; }
+
 #codeBox {
-  width:100%; max-width:95%; background:#2d2d2d; padding:15px; border-radius:8px;
+  width:100%; max-width:95%;
+  background:#2d2d2d; padding:15px; border-radius:8px;
   text-align:left; min-height:300px; max-height:500px;
   overflow-y:auto; overflow-x:auto; white-space:pre; box-shadow:0 0 10px #000;
   margin-top:20px; box-sizing:border-box; position:relative;
 }
+
 pre { margin:0; font-family:monospace; font-size:14px; }
 .cursor { display:inline-block; width:8px; background:white; margin-left:2px; animation: blink 0.7s steps(1) infinite; }
 @keyframes blink { 50% { background: transparent; } }
-.copy-btn {
-  position:absolute; top:10px; right:10px; color:white; cursor:pointer; font-size:18px; opacity:0.7; transition:opacity 0.2s;
-}
+
+.copy-btn { position:absolute; top:10px; right:10px; color:white; cursor:pointer; font-size:18px; opacity:0.7; transition:opacity 0.2s; }
 .copy-btn:hover { opacity:1; }
-hr { border:0; border-top:1px solid #555; margin:10px 0 10px 0; }
-@media (max-width:600px){
-  select, button { width:90%; font-size:14px; }
-  #codeBox { min-height:200px; font-size:12px; padding:10px; }
+
+hr { border: 0; border-top: 1px solid #555; margin:10px 0 10px 0; }
+
+@media (max-width:600px){ 
+  select, button { width:90%; font-size:14px; } 
+  #codeBox { min-height:200px; font-size:12px; padding:10px; } 
   .copy-btn { font-size:16px; }
 }
 </style>
@@ -62,89 +60,73 @@ let codeData = {};
 let typingSpeedRange=[15,50];
 let lastIndex = {};
 
-// Load JSON
-fetch('codes.json')
-  .then(res=>res.json())
-  .then(data=>{
-    codeData = data;
-    populateLanguages();
-  })
-  .catch(err => console.error('Failed to load JSON:', err));
-
-// Populate language dropdown
-function populateLanguages(){
-  const langSelect = document.getElementById('languageSelect');
+fetch('codes.json').then(res=>res.json()).then(data=>{ 
+  codeData=data; 
+  const langSelect=document.getElementById('languageSelect');
   Object.keys(codeData).forEach(lang=>{
-    const option = document.createElement('option');
-    option.value = lang;
-    option.textContent = lang;
+    let option=document.createElement('option'); 
+    option.value=lang; 
+    option.textContent=lang; 
     langSelect.appendChild(option);
   });
-}
-
-// Populate topics dropdown on language change
-document.getElementById('languageSelect').addEventListener('change', function(){
-  const topicSelect = document.getElementById('topicSelect');
-  topicSelect.innerHTML = '<option value="">Select Topic</option>';
-  const lang = this.value;
-  if(lang && codeData[lang]){
-    Object.keys(codeData[lang]).forEach(topic=>{
-      const option = document.createElement('option');
-      option.value = topic;
-      option.textContent = topic.replace(/_/g,' ');
-      topicSelect.appendChild(option);
-    });
-    topicSelect.disabled = false;
-  } else {
-    topicSelect.disabled = true;
-  }
 });
 
-// Load random snippet when topic changes
+document.getElementById('languageSelect').addEventListener('change', function(){
+  const topicSelect=document.getElementById('topicSelect'); 
+  topicSelect.innerHTML='<option value="">Select Topic</option>';
+  const lang=this.value;
+  if(lang){
+    Object.keys(codeData[lang]).forEach(topic=>{
+      let option=document.createElement('option'); 
+      option.value=topic; 
+      option.textContent=topic; 
+      topicSelect.appendChild(option);
+    });
+    topicSelect.disabled=false;
+  } else topicSelect.disabled=true;
+});
+
 document.getElementById('topicSelect').addEventListener('change', function(){
-  const lang = document.getElementById('languageSelect').value;
-  const topic = this.value;
-  if(lang && topic && codeData[lang][topic]){
-    const codes = codeData[lang][topic];
+  const lang=document.getElementById('languageSelect').value;
+  const topic=this.value;
+  if(lang && topic){
+    const codes=codeData[lang][topic];
     let randomIndex;
     do {
-      randomIndex = Math.floor(Math.random() * codes.length);
-    } while(codes.length > 1 && randomIndex === (lastIndex[lang+'-'+topic] || -1));
-    lastIndex[lang+'-'+topic] = randomIndex;
+      randomIndex=Math.floor(Math.random()*codes.length);
+    } while(codes.length>1 && randomIndex === (lastIndex[lang+'-'+topic]||-1));
+    lastIndex[lang+'-'+topic]=randomIndex;
     typeCode(codes[randomIndex], lang);
   }
 });
 
-// Typing animation with line by line formatting
 function typeCode(text, language){
   const codeEl = document.getElementById('code');
-  codeEl.className = 'language-' + (language.toLowerCase() === 'javascript' ? 'javascript' : language.toLowerCase().replace('+','p'));
+  codeEl.className = 'language-' + (language.toLowerCase()==='javascript' ? 'javascript' : language.toLowerCase().replace('+','p'));
   codeEl.textContent = '';
-  const codeBox = document.getElementById('codeBox');
-  let index = 0;
+  let index=0;
+  const codeBox=document.getElementById('codeBox');
 
   function typeChar(){
-    if(index < text.length){
-      const char = text[index++];
+    if(index<text.length){
+      let char=text[index++];
       codeEl.textContent += char;
       Prism.highlightElement(codeEl);
       codeBox.scrollTop = codeBox.scrollHeight;
       codeBox.scrollLeft = codeBox.scrollWidth;
-      setTimeout(typeChar, Math.floor(Math.random()*(typingSpeedRange[1]-typingSpeedRange[0]+1)) + typingSpeedRange[0]);
+      setTimeout(typeChar, Math.floor(Math.random()*(typingSpeedRange[1]-typingSpeedRange[0]+1))+typingSpeedRange[0]);
     }
   }
   typeChar();
 }
 
-// Copy code button
 document.querySelector('.copy-btn').addEventListener('click', ()=>{
-  const codeText = document.getElementById('code').textContent;
-  navigator.clipboard.writeText(codeText)
-    .then(()=>{ alert('Code copied to clipboard!'); })
-    .catch(err=>{ console.error('Copy failed', err); });
+  navigator.clipboard.writeText(document.getElementById('code').textContent)
+    .then(()=>{ alert('Code copied to clipboard!'); });
 });
 </script>
 
 </body>
 </html>
+
 
