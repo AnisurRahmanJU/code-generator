@@ -1,0 +1,321 @@
+{
+  "C": {
+    "variables": [
+      "int a = 10;\nfloat b = 3.5;\nchar c = 'A';\nprintf(\"%d %f %c\", a, b, c);",
+      "int x = 5, y = 15;\nprintf(\"Sum = %d\", x + y);",
+      "float radius = 7.5;\nfloat area = 3.14 * radius * radius;\nprintf(\"Area = %f\", area);",
+      "char grade = 'B';\nprintf(\"Grade: %c\", grade);",
+      "int m = 12;\nint n = 8;\nprintf(\"Difference = %d\", m - n);"
+    ],
+    "condition": [
+      "int a = 10;\nif(a > 5){ printf(\"Greater than 5\"); } else { printf(\"5 or less\"); }",
+      "int n = 3;\nswitch(n){ case 1: printf(\"One\"); break; case 2: printf(\"Two\"); break; default: printf(\"Other\"); }",
+      "int age = 18;\nif(age >= 18) printf(\"Adult\"); else printf(\"Minor\");",
+      "int num = -5;\nif(num < 0) printf(\"Negative\"); else printf(\"Positive\");",
+      "int score = 85;\nif(score >= 90) printf(\"A\"); else if(score >= 75) printf(\"B\"); else printf(\"C\");"
+    ],
+    "loop_for": [
+      "for(int i=0;i<5;i++){ printf(\"%d\\n\", i); }",
+      "int sum = 0;\nfor(int i=1;i<=10;i++) sum += i;\nprintf(\"Sum=%d\", sum);",
+      "for(int i=10;i>0;i--){ printf(\"%d \", i); }",
+      "for(int i=1;i<=5;i++){ for(int j=1;j<=i;j++) printf(\"*\"); printf(\"\\n\"); }",
+      "int arr[5]={1,2,3,4,5};\nfor(int i=0;i<5;i++) printf(\"%d \", arr[i]);"
+    ],
+    "loop_while": [
+      "int i=0;\nwhile(i<5){ printf(\"%d\\n\", i); i++; }",
+      "int sum=0,i=1;\nwhile(i<=10){ sum+=i; i++; }\nprintf(\"Sum=%d\", sum);",
+      "int n=5;\nwhile(n>0){ printf(\"%d \", n); n--; }",
+      "int i=1;\nwhile(i<=5){ printf(\"*\\n\"); i++; }",
+      "int x=0;\nwhile(x<3){ printf(\"Hello\\n\"); x++; }"
+    ],
+    "loop_do_while": [
+      "int i=0;\ndo{ printf(\"%d\\n\", i); i++; }while(i<5);",
+      "int n=1,sum=0;\ndo{ sum+=n; n++; }while(n<=10);\nprintf(\"Sum=%d\", sum);",
+      "int i=5;\ndo{ printf(\"%d \", i); i--; }while(i>0);",
+      "int i=0;\ndo{ printf(\"Hello\\n\"); i++; }while(i<3);",
+      "int x=1;\ndo{ printf(\"* \"); x++; }while(x<=5);"
+    ],
+    "array": [
+      "int arr[5] = {1,2,3,4,5};\nfor(int i=0;i<5;i++) printf(\"%d \", arr[i]);",
+      "int arr[3]; arr[0]=10; arr[1]=20; arr[2]=30;\nfor(int i=0;i<3;i++) printf(\"%d \", arr[i]);",
+      "int arr[5]={0}; for(int i=0;i<5;i++) arr[i]=i+1;\nfor(int i=0;i<5;i++) printf(\"%d \", arr[i]);",
+      "int arr[]={5,4,3,2,1}; for(int i=0;i<5;i++) printf(\"%d \", arr[i]);",
+      "int arr[6]={1,2,3,4,5,6}; for(int i=0;i<6;i++) printf(\"%d \", arr[i]);"
+    ],
+    "string": [
+      "char str[20] = \"Hello\";\nprintf(\"%s\", str);",
+      "char name[]=\"Alice\";\nprintf(\"Name: %s\", name);",
+      "char str1[10]; strcpy(str1,\"Test\");\nprintf(\"%s\", str1);",
+      "char s[10]; scanf(\"%s\", s);\nprintf(\"Input: %s\", s);",
+      "char msg[50]=\"C Programming\";\nprintf(\"%s\", msg);"
+    ],
+    "structure": [
+      "struct Point { int x; int y; };\nstruct Point p1 = {10,20};\nprintf(\"%d %d\", p1.x, p1.y);",
+      "struct Student { char name[20]; int age; } s1={\"Bob\",20};\nprintf(\"%s %d\", s1.name,s1.age);",
+      "struct Rectangle { int length; int width; } r={5,10};\nprintf(\"Area=%d\", r.length*r.width);",
+      "struct Circle { float radius; } c={7.5};\nprintf(\"Radius=%f\", c.radius);",
+      "struct Point { int x,y; } p; p.x=1; p.y=2;\nprintf(\"%d %d\", p.x,p.y);"
+    ],
+    "function": [
+      "int sum(int a,int b){ return a+b; }\nprintf(\"%d\", sum(3,4));",
+      "void greet(){ printf(\"Hello World\\n\"); }\ngreet();",
+      "int multiply(int x,int y){ return x*y; }\nprintf(\"%d\", multiply(5,6));",
+      "float area(float r){ return 3.14*r*r; }\nprintf(\"%f\", area(5));",
+      "int max(int a,int b){ return (a>b)?a:b; }\nprintf(\"%d\", max(4,7));"
+    ],
+    "file": [
+      "FILE *fp = fopen(\"data.txt\",\"w\"); fprintf(fp,\"Hello\"); fclose(fp);",
+      "FILE *fp=fopen(\"test.txt\",\"r\"); char c=fgetc(fp);\nprintf(\"%c\",c); fclose(fp);",
+      "FILE *f=fopen(\"file.txt\",\"a\"); fprintf(f,\"Append Text\\n\"); fclose(f);",
+      "FILE *f=fopen(\"numbers.txt\",\"w\"); for(int i=1;i<=5;i++) fprintf(f,\"%d\\n\",i); fclose(f);",
+      "FILE *f=fopen(\"input.txt\",\"r\"); char str[20]; fscanf(f,\"%s\",str); printf(\"%s\",str); fclose(f);"
+    ],
+    "math_function": [
+      "#include <math.h>\ndouble val = sqrt(16);\nprintf(\"%f\", val);",
+      "double x = pow(2,3);\nprintf(\"%f\", x);",
+      "double y = fabs(-5.5);\nprintf(\"%f\", y);",
+      "double z = ceil(4.3);\nprintf(\"%f\", z);",
+      "double w = floor(4.8);\nprintf(\"%f\", w);"
+    ]
+  },
+
+  "C++": {
+    "variables": [
+      "int a = 10; double b = 3.5; char c = 'A'; cout << a << ' ' << b << ' ' << c;",
+      "int x = 5, y = 15; cout << x + y;",
+      "float radius = 7.5; float area = 3.14*radius*radius; cout << area;",
+      "char grade='B'; cout << grade;",
+      "int m=12, n=8; cout << m-n;"
+    ],
+    "condition": [
+      "int x = 10; if(x>5) cout << \"Greater\"; else cout << \"Smaller\";",
+      "int n=2; switch(n){ case 1: cout << 1; break; case 2: cout << 2; break; default: cout<<0; }",
+      "int age=18; if(age>=18) cout << \"Adult\"; else cout << \"Minor\";",
+      "int num=-5; if(num<0) cout<<\"Neg\"; else cout<<\"Pos\";",
+      "int score=85; if(score>=90) cout<<\"A\"; else if(score>=75) cout<<\"B\"; else cout<<\"C\";"
+    ],
+    "loop_for": [
+      "for(int i=0;i<5;i++) cout << i << endl;",
+      "int sum=0; for(int i=1;i<=10;i++) sum+=i; cout<<sum;",
+      "for(int i=10;i>0;i--) cout << i << ' ';",
+      "for(int i=1;i<=5;i++){ for(int j=1;j<=i;j++) cout << '*'; cout << endl; }",
+      "int arr[5]={1,2,3,4,5}; for(int i=0;i<5;i++) cout<<arr[i]<<' ';"
+    ],
+    "loop_while": [
+      "int i=0; while(i<5){ cout<<i<<endl; i++; }",
+      "int sum=0,i=1; while(i<=10){ sum+=i; i++; } cout<<sum;",
+      "int n=5; while(n>0){ cout<<n<<' '; n--; }",
+      "int i=1; while(i<=5){ cout<<'*'<<endl; i++; }",
+      "int x=0; while(x<3){ cout<<\"Hello\"<<endl; x++; }"
+    ],
+    "loop_do_while": [
+      "int i=0; do{ cout<<i<<endl; i++; }while(i<5);",
+      "int sum=0,n=1; do{ sum+=n; n++; }while(n<=10); cout<<sum;",
+      "int i=5; do{ cout<<i<<' '; i--; }while(i>0);",
+      "int i=0; do{ cout<<\"Hello\"<<endl; i++; }while(i<3);",
+      "int x=1; do{ cout<<'*'<<' '; x++; }while(x<=5);"
+    ],
+    "array": [
+      "int arr[5]={1,2,3,4,5}; for(int i=0;i<5;i++) cout<<arr[i]<<' ';",
+      "int arr[3]; arr[0]=10; arr[1]=20; arr[2]=30; for(int i=0;i<3;i++) cout<<arr[i]<<' ';",
+      "int arr[5]={0}; for(int i=0;i<5;i++) arr[i]=i+1; for(int i=0;i<5;i++) cout<<arr[i]<<' ';",
+      "int arr[]={5,4,3,2,1}; for(int i=0;i<5;i++) cout<<arr[i]<<' ';",
+      "int arr[6]={1,2,3,4,5,6}; for(int i=0;i<6;i++) cout<<arr[i]<<' ';"
+    ],
+    "string": [
+      "#include<string>\nstring s=\"Hello\"; cout<<s;",
+      "string name=\"Alice\"; cout<<name;",
+      "string s1=\"Test\"; cout<<s1;",
+      "string s2; cin>>s2; cout<<s2;",
+      "string msg=\"C++ Programming\"; cout<<msg;"
+    ],
+    "structure": [
+      "struct Point{ int x,y; }; Point p={10,20}; cout<<p.x<<' '<<p.y;",
+      "struct Student{ string name; int age; }; Student s={\"Bob\",20}; cout<<s.name<<s.age;",
+      "struct Rect{ int l,w; }; Rect r={5,10}; cout<<r.l*r.w;",
+      "struct Circle{ float radius; }; Circle c={7.5}; cout<<c.radius;",
+      "struct Point{int x,y;}; Point p1; p1.x=1; p1.y=2; cout<<p1.x<<p1.y;"
+    ],
+    "function": [
+      "int sum(int a,int b){ return a+b; } cout<<sum(3,4);",
+      "void greet(){ cout<<\"Hello\"<<endl; } greet();",
+      "int multiply(int x,int y){ return x*y; } cout<<multiply(5,6);",
+      "float area(float r){ return 3.14*r*r; } cout<<area(5);",
+      "int max(int a,int b){ return (a>b)?a:b; } cout<<max(4,7);"
+    ],
+    "file": [
+      "#include<fstream>\nofstream f(\"data.txt\"); f<<\"Hello\"; f.close();",
+      "ifstream f2(\"test.txt\"); char c; f2>>c; cout<<c; f2.close();",
+      "ofstream f3(\"append.txt\",ios::app); f3<<\"Append\\n\"; f3.close();",
+      "ofstream f4(\"numbers.txt\"); for(int i=1;i<=5;i++) f4<<i<<endl; f4.close();",
+      "ifstream f5(\"input.txt\"); string s; f5>>s; cout<<s; f5.close();"
+    ],
+    "math_function": [
+      "#include<cmath>\ndouble val=sqrt(16); cout<<val;",
+      "double x=pow(2,3); cout<<x;",
+      "double y=fabs(-5.5); cout<<y;",
+      "double z=ceil(4.3); cout<<z;",
+      "double w=floor(4.8); cout<<w;"
+    ]
+  },
+
+  "JavaScript": {
+    "variables": [
+      "let a = 10;\nconst b = 3.5;\nvar c = 'Hello';\nconsole.log(a,b,c);",
+      "let x=5, y=15; console.log(x+y);",
+      "let radius=7.5; let area=Math.PI*radius*radius; console.log(area);",
+      "const grade='B'; console.log(grade);",
+      "var m=12, n=8; console.log(m-n);"
+    ],
+    "condition": [
+      "let x=10; if(x>5){ console.log('Greater'); } else { console.log('Smaller'); }",
+      "let n=2; switch(n){ case 1: console.log(1); break; case 2: console.log(2); break; default: console.log(0); }",
+      "let age=18; console.log(age>=18?'Adult':'Minor');",
+      "let num=-5; console.log(num<0?'Negative':'Positive');",
+      "let score=85; if(score>=90) console.log('A'); else if(score>=75) console.log('B'); else console.log('C');"
+    ],
+    "loop_for": [
+      "for(let i=0;i<5;i++){ console.log(i); }",
+      "let sum=0; for(let i=1;i<=10;i++) sum+=i; console.log(sum);",
+      "for(let i=10;i>0;i--) console.log(i);",
+      "for(let i=1;i<=5;i++){ let s=''; for(let j=1;j<=i;j++) s+='*'; console.log(s); }",
+      "let arr=[1,2,3,4,5]; arr.forEach(e=>console.log(e));"
+    ],
+    "loop_while": [
+      "let i=0; while(i<5){ console.log(i); i++; }",
+      "let sum=0, i=1; while(i<=10){ sum+=i; i++; } console.log(sum);",
+      "let n=5; while(n>0){ console.log(n); n--; }",
+      "let i=1; while(i<=5){ console.log('*'); i++; }",
+      "let x=0; while(x<3){ console.log('Hello'); x++; }"
+    ],
+    "loop_do_while": [
+      "let i=0; do{ console.log(i); i++; } while(i<5);",
+      "let sum=0, n=1; do{ sum+=n; n++; }while(n<=10); console.log(sum);",
+      "let i=5; do{ console.log(i); i--; }while(i>0);",
+      "let i=0; do{ console.log('Hello'); i++; }while(i<3);",
+      "let x=1; do{ console.log('*'); x++; }while(x<=5);"
+    ],
+    "array": [
+      "let arr=[1,2,3,4,5]; arr.forEach(e=>console.log(e));",
+      "let arr=[10,20,30]; for(let i=0;i<arr.length;i++) console.log(arr[i]);",
+      "let arr=[]; for(let i=0;i<5;i++) arr.push(i+1); console.log(arr);",
+      "let arr=[5,4,3,2,1]; arr.forEach(e=>console.log(e));",
+      "let arr=[1,2,3,4,5,6]; arr.forEach(e=>console.log(e));"
+    ],
+    "string": [
+      "let str='Hello'; console.log(str);",
+      "let name='Alice'; console.log(name);",
+      "let msg='JavaScript'; console.log(msg);",
+      "let s='Test'; console.log(s);",
+      "let input=prompt('Enter'); console.log(input);"
+    ],
+    "structure": [
+      "let point={x:10,y:20}; console.log(point.x,point.y);",
+      "let student={name:'Bob',age:20}; console.log(student.name,student.age);",
+      "let rect={l:5,w:10}; console.log(rect.l*rect.w);",
+      "let circle={radius:7.5}; console.log(circle.radius);",
+      "let p={x:1,y:2}; console.log(p.x,p.y);"
+    ],
+    "function": [
+      "function sum(a,b){ return a+b; } console.log(sum(3,4));",
+      "function greet(){ console.log('Hello'); } greet();",
+      "function multiply(x,y){ return x*y; } console.log(multiply(5,6));",
+      "function area(r){ return Math.PI*r*r; } console.log(area(5));",
+      "function max(a,b){ return (a>b)?a:b; } console.log(max(4,7));"
+    ],
+    "file": [
+      "// Node.js\nconst fs=require('fs'); fs.writeFileSync('data.txt','Hello');",
+      "const fs=require('fs'); let data=fs.readFileSync('data.txt','utf8'); console.log(data);",
+      "const fs=require('fs'); fs.appendFileSync('data.txt','\\nAppend');",
+      "const fs=require('fs'); let lines=fs.readFileSync('numbers.txt','utf8').split('\\n'); console.log(lines);",
+      "const fs=require('fs'); fs.writeFileSync('input.txt','Sample');"
+    ],
+    "math_function": [
+      "let val=Math.sqrt(16); console.log(val);",
+      "let x=Math.pow(2,3); console.log(x);",
+      "let y=Math.abs(-5.5); console.log(y);",
+      "let z=Math.ceil(4.3); console.log(z);",
+      "let w=Math.floor(4.8); console.log(w);"
+    ]
+  },
+
+  "Java": {
+    "variables": [
+      "int a = 10; double b = 3.5; char c='A'; System.out.println(a+\" \"+b+\" \"+c);",
+      "int x=5,y=15; System.out.println(x+y);",
+      "float radius=7.5f; float area=3.14f*radius*radius; System.out.println(area);",
+      "char grade='B'; System.out.println(grade);",
+      "int m=12,n=8; System.out.println(m-n);"
+    ],
+    "condition": [
+      "int x=10; if(x>5) System.out.println(\"Greater\"); else System.out.println(\"Smaller\");",
+      "int n=2; switch(n){ case 1:System.out.println(1); break; case 2:System.out.println(2); break; default:System.out.println(0); }",
+      "int age=18; System.out.println(age>=18?\"Adult\":\"Minor\");",
+      "int num=-5; System.out.println(num<0?\"Negative\":\"Positive\");",
+      "int score=85; if(score>=90) System.out.println('A'); else if(score>=75) System.out.println('B'); else System.out.println('C');"
+    ],
+    "loop_for": [
+      "for(int i=0;i<5;i++) System.out.println(i);",
+      "int sum=0; for(int i=1;i<=10;i++) sum+=i; System.out.println(sum);",
+      "for(int i=10;i>0;i--) System.out.println(i);",
+      "for(int i=1;i<=5;i++){ for(int j=1;j<=i;j++) System.out.print('*'); System.out.println(); }",
+      "int[] arr={1,2,3,4,5}; for(int i:arr) System.out.println(i);"
+    ],
+    "loop_while": [
+      "int i=0; while(i<5){ System.out.println(i); i++; }",
+      "int sum=0,i=1; while(i<=10){ sum+=i; i++; } System.out.println(sum);",
+      "int n=5; while(n>0){ System.out.println(n); n--; }",
+      "int i=1; while(i<=5){ System.out.println('*'); i++; }",
+      "int x=0; while(x<3){ System.out.println(\"Hello\"); x++; }"
+    ],
+    "loop_do_while": [
+      "int i=0; do{ System.out.println(i); i++; }while(i<5);",
+      "int sum=0,i=1; do{ sum+=i; i++; }while(i<=10); System.out.println(sum);",
+      "int i=5; do{ System.out.println(i); i--; }while(i>0);",
+      "int i=0; do{ System.out.println(\"Hello\"); i++; }while(i<3);",
+      "int x=1; do{ System.out.print('*'); x++; }while(x<=5);"
+    ],
+    "array": [
+      "int[] arr={1,2,3,4,5}; for(int i:arr) System.out.println(i);",
+      "int[] arr=new int[3]; arr[0]=10; arr[1]=20; arr[2]=30; for(int i:arr) System.out.println(i);",
+      "int[] arr=new int[5]; for(int i=0;i<5;i++) arr[i]=i+1; for(int i:arr) System.out.println(i);",
+      "int[] arr={5,4,3,2,1}; for(int i:arr) System.out.println(i);",
+      "int[] arr={1,2,3,4,5,6}; for(int i:arr) System.out.println(i);"
+    ],
+    "string": [
+      "String str=\"Hello\"; System.out.println(str);",
+      "String name=\"Alice\"; System.out.println(name);",
+      "String msg=\"Java Programming\"; System.out.println(msg);",
+      "String s=\"Test\"; System.out.println(s);",
+      "String input=new Scanner(System.in).nextLine(); System.out.println(input);"
+    ],
+    "structure": [
+      "class Point{ int x,y; } Point p=new Point(); p.x=10; p.y=20; System.out.println(p.x+\" \"+p.y);",
+      "class Student{ String name; int age; } Student s=new Student(); s.name=\"Bob\"; s.age=20; System.out.println(s.name+s.age);",
+      "class Rect{ int l,w; } Rect r=new Rect(); r.l=5; r.w=10; System.out.println(r.l*r.w);",
+      "class Circle{ float radius; } Circle c=new Circle(); c.radius=7.5f; System.out.println(c.radius);",
+      "class Point2{ int x,y; } Point2 p1=new Point2(); p1.x=1; p1.y=2; System.out.println(p1.x+\" \"+p1.y);"
+    ],
+    "function": [
+      "int sum(int a,int b){ return a+b; } System.out.println(sum(3,4));",
+      "void greet(){ System.out.println(\"Hello\"); } greet();",
+      "int multiply(int x,int y){ return x*y; } System.out.println(multiply(5,6));",
+      "float area(float r){ return 3.14f*r*r; } System.out.println(area(5));",
+      "int max(int a,int b){ return (a>b)?a:b; } System.out.println(max(4,7));"
+    ],
+    "file": [
+      "import java.io.*; FileWriter fw=new FileWriter(\"data.txt\"); fw.write(\"Hello\"); fw.close();",
+      "BufferedReader br=new BufferedReader(new FileReader(\"data.txt\")); String line=br.readLine(); System.out.println(line); br.close();",
+      "FileWriter fw=new FileWriter(\"append.txt\",true); fw.write(\"Append\\n\"); fw.close();",
+      "PrintWriter pw=new PrintWriter(new FileWriter(\"numbers.txt\")); for(int i=1;i<=5;i++) pw.println(i); pw.close();",
+      "Scanner sc=new Scanner(new File(\"input.txt\")); String s=sc.nextLine(); System.out.println(s); sc.close();"
+    ],
+    "math_function": [
+      "double val=Math.sqrt(16); System.out.println(val);",
+      "double x=Math.pow(2,3); System.out.println(x);",
+      "double y=Math.abs(-5.5); System.out.println(y);",
+      "double z=Math.ceil(4.3); System.out.println(z);",
+      "double w=Math.floor(4.8); System.out.println(w);"
+    ]
+  }
+}
