@@ -49,7 +49,7 @@
       "#include <stdio.h>\n#include <string.h>\nint main(){ char str[]=\"Hello\"; strcpy(str,\"Hi\"); printf(\"%s\\n\",str); return 0; }",
       "#include <stdio.h>\n#include <string.h>\nint main(){ char str1[]=\"abc\"; char str2[]=\"xyz\"; int cmp=strcmp(str1,str2); printf(\"%d\\n\",cmp); return 0; }"
     ]
-    /* Similarly add function, structure, file, math_function */
+    
   },
   "C++": {
     "variables": [
@@ -59,23 +59,20 @@
       "#include <iostream>\nusing namespace std;\nint main(){ char grade='B'; cout<<grade<<endl; return 0; }",
       "#include <iostream>\nusing namespace std;\nint main(){ long population=7800000000; cout<<population<<endl; return 0; }"
     ]
-    /* Add all other topics like C */
+    
   },
   "Java": {
     "variables": [
       "public class Main{\n public static void main(String[] args){ int a=10; double b=3.5; char c='A'; System.out.println(a+\" \"+b+\" \"+c); } }",
-      "public class Main{\n public static void main(String[] args){ int x=5,y=15; System.out.println(x+y); } }"
-      /* Add 3 more examples */
-    ]
-    /* Add all other topics */
+      "public class Main{\n public static void main(String[] args){ int x=5,y=15; System.out.println(x+y); }",]
   },
   "JavaScript": {
     "variables": [
       "let a=10;\nlet b=3.5;\nlet c='A';\nconsole.log(a,b,c);",
       "let x=5, y=15;\nconsole.log(x+y);"
-      /* Add 3 more examples */
+    
     ]
-    /* Add all other topics */
+  
   }
 }
 
